@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAZIMA Stakeholder Presentation</title>
+    <style>
+        @font-face {
+            font-family: 'Breathing';
+            src: local('Breathing');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Gotham Book';
+            src: local('Gotham Book');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Gotham Light';
+            src: local('Gotham Light');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Gotham Bold';
+            src: local('Gotham Bold');
+            font-display: swap;
+        }
+        :root {
+            --font-script:     'Breathing', 'Brush Script MT', cursive;
+            --font-book:       'Gotham Book', 'Avenir Next', 'Trebuchet MS', sans-serif;
+            --font-light:      'Gotham Light', 'Avenir Next', 'Trebuchet MS', sans-serif;
+            --font-bold:       'Gotham Bold', 'Avenir Next Demi Bold', 'Trebuchet MS', sans-serif;
+            --gold:            #FFC844;
+            --gold-dark:       #E0592A;
+            --magenta:         #B12028;
+            --magenta-dark:    #CA3625;
+            --teal:            #E0592A;
+            --teal-dark:       #CA3625;
+            --aqua:            #58585A;
+            --charcoal-900:    #0F1F3B;
+            --charcoal-800:    #172C52;
+            --charcoal-700:    #1F3D7B;
+            --charcoal-600:    #3A3A3C;
+            --slate-300:       #F0EADC;
+            --slate-400:       #CFC9BC;
+            --white:           #FFFFFF;
+            --beige:           #F0EADC;
+            --brand-blue:      #1F3D7B;
+            --midnight:        #0F1F3B;
+            --navy:            #172C52;
+            --photo-hero-man:  url('https://amazima.org/wp-content/uploads/2024/07/community-engagement-fullwidth-friends-smiles.jpg');
+            --photo-foundation:url('https://amazima.org/wp-content/uploads/2024/07/community-engagement-fullwidth-home-visits.jpg');
+            --photo-benefits:  url('https://amazima.org/wp-content/uploads/2024/12/community-engagement-gallery-DSC05333.jpg');
+            --photo-model:     url('https://amazima.org/wp-content/uploads/2024/07/community-engagement-fullwidth-friends-smiles.jpg');
+            --photo-components:url('https://amazima.org/wp-content/uploads/2024/12/community-engagement-gallery-DSC05333.jpg');
+            --photo-career:    url('https://amazima.org/wp-content/uploads/2024/07/community-engagement-fullwidth-home-visits.jpg');
+            --photo-goals:     url('https://amazima.org/wp-content/uploads/2024/07/community-engagement-fullwidth-friends-smiles.jpg');
+            --photo-eval:      url('https://amazima.org/wp-content/uploads/2024/12/community-engagement-gallery-DSC05333.jpg');
+            --photo-reviews:   url('https://amazima.org/wp-content/uploads/2024/07/community-engagement-fullwidth-friends-smiles.jpg');
+            --photo-recog:     url('https://amazima.org/wp-content/uploads/2024/07/community-engagement-fullwidth-home-visits.jpg');
+            --photo-talent:    url('https://amazima.org/wp-content/uploads/2024/07/community-engagement-fullwidth-home-visits.jpg');
+            --photo-bottom:    url('https://amazima.org/wp-content/uploads/2024/07/community-engagement-fullwidth-farming.jpg');
+            --gradient-magenta:  linear-gradient(135deg, #B12028, #CA3625);
+            --gradient-gold:     linear-gradient(135deg, #FFC844, #E0592A);
+            --gradient-teal:     linear-gradient(135deg, #E0592A, #CA3625);
+            --gradient-aqua:     linear-gradient(135deg, #58585A, #000000);
+            --gradient-brand:    linear-gradient(90deg, #B12028, #FFC844);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-book); background: var(--charcoal-900); color: var(--slate-300); line-height: 1.7; font-size: 1.05rem; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-brand); z-index: 9999; }
+        body::after { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 32px 32px; pointer-events: none; z-index: 0; }
+
+        .top-nav { position: fixed; top: 4px; left: 0; right: 0; z-index: 1000; padding: 1rem 3rem; display: flex; align-items: center; justify-content: space-between; background: rgba(15,31,59,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.06); transition: all 0.3s ease; }
+        .top-nav.scrolled { padding: 0.75rem 3rem; background: rgba(23,44,82,0.95); }
+        .nav-brand { font-family: var(--font-bold); font-weight: 700; font-size: 1.25rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.7rem; }
+        .nav-brand .gold { color: var(--gold-dark); white-space: nowrap; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--slate-400); text-decoration: none; letter-spacing: 0.03em; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--white); }
+        .nav-cta { padding: 0.55rem 1.5rem !important; background: var(--gradient-magenta) !important; color: var(--white) !important; border-radius: 100px; font-weight: 600 !important; font-size: 0.82rem !important; box-shadow: 0 4px 15px rgba(177,32,40,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease !important; }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(177,32,40,0.4) !important; }
+
+        section { position: relative; z-index: 1; padding: 7rem 3rem; max-width: 1200px; margin: 0 auto; }
+        section:first-of-type { padding-top: 10rem; }
+        .section-label { font-family: var(--font-light); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--magenta); margin-bottom: 1rem; display: inline-block; }
+        .section-title { font-family: var(--font-bold); font-size: clamp(2.25rem, 4.5vw, 3.25rem); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--white); line-height: 1.15; margin-bottom: 1.5rem; }
+        .section-body { max-width: 750px; font-size: 1.1rem; line-height: 1.8; }
+        .section-divider { width: 100%; max-width: 1200px; margin: 0 auto; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent); }
+
+        .hero { text-align: center; padding-top: 12rem !important; padding-bottom: 8rem !important; display: flex; flex-direction: column; align-items: center; position: relative; }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                linear-gradient(180deg, rgba(15,31,59,1) 0%, rgba(15,31,59,0.94) 20%, rgba(15,31,59,0.58) 42%, rgba(15,31,59,0.16) 62%, rgba(15,31,59,0.28) 100%),
+                linear-gradient(135deg, rgba(15,31,59,0.78), rgba(23,44,82,0.72)),
+                radial-gradient(ellipse 60% 45% at 50% 26%, rgba(177,32,40,0.08) 0%, transparent 70%),
+                var(--photo-hero-man) center 30%/cover no-repeat;
+            pointer-events: none;
+            z-index: -1;
+        }
+        #foundation::before,
+        #model::before,
+        #benefits::before,
+        #components::before,
+        #career-paths::before,
+        #goals::before,
+        #evaluation::before,
+        #reviews::before,
+        #compensation::before,
+        #talent::before,
+        #forms::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            border-radius: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #foundation::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.84), rgba(23,44,82,0.80)),
+                var(--photo-foundation);
+            background-position: center 32%;
+        }
+        #benefits::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.82), rgba(23,44,82,0.80)),
+                var(--photo-benefits);
+            background-position: center 36%;
+        }
+        #model::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.82), rgba(23,44,82,0.80)),
+                var(--photo-model);
+            background-position: center 32%;
+        }
+        #components::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.84), rgba(23,44,82,0.80)),
+                var(--photo-components);
+            background-position: center 34%;
+        }
+        #career-paths::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.84), rgba(23,44,82,0.80)),
+                var(--photo-career);
+            background-position: center 30%;
+        }
+        #goals::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.82), rgba(23,44,82,0.80)),
+                var(--photo-goals);
+            background-position: center 28%;
+        }
+        #evaluation::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.84), rgba(23,44,82,0.80)),
+                var(--photo-eval);
+            background-position: center 30%;
+        }
+        #reviews::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.84), rgba(23,44,82,0.80)),
+                var(--photo-reviews);
+            background-position: center 31%;
+        }
+        #compensation::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.84), rgba(23,44,82,0.80)),
+                var(--photo-recog);
+            background-position: center 34%;
+        }
+        #talent::before {
+            background-image:
+                linear-gradient(145deg, rgba(15,31,59,0.82), rgba(23,44,82,0.78)),
+                var(--photo-talent);
+            background-position: center 34%;
+        }
+        #forms::before {
+            background-image:
+                linear-gradient(180deg, rgba(15,31,59,0.08) 0%, rgba(15,31,59,0.34) 56%, rgba(15,31,59,0.92) 100%),
+                linear-gradient(145deg, rgba(15,31,59,0.72), rgba(23,44,82,0.70)),
+                var(--photo-hero-man);
+            background-position: center 30%;
+        }
+        .hero-series { font-family: var(--font-light); font-size: 2.55rem; line-height: 1.1; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--magenta); margin-bottom: 1rem; }
+        .hero-title { font-family: var(--font-script); font-size: clamp(3rem, 7vw, 5rem); font-weight: 700; color: var(--white); line-height: 1.05; margin-bottom: 1.5rem; }
+        .hero-title .gold { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-tagline { font-size: 1.2rem; color: var(--slate-300); max-width: 620px; line-height: 1.7; }
+        .hero-badge { display: inline-block; margin-top: 2.5rem; padding: 0.6rem 2rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 100px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--slate-400); }
+        .presentation-logo-wrap { display: flex; justify-content: center; padding: 1rem 1.5rem; position: relative; z-index: 1; }
+        .presentation-logo-wrap.top {
+            padding-top: 6.1rem;
+            padding-bottom: 1.6rem;
+            background: linear-gradient(180deg, rgba(15,31,59,0.98) 0%, rgba(15,31,59,0.9) 50%, rgba(15,31,59,0) 100%);
+        }
+        .presentation-logo-wrap.bottom {
+            margin-top: -6px;
+            padding-top: 2.1rem;
+            padding-bottom: 2.1rem;
+            background:
+                linear-gradient(0deg, rgba(15,31,59,0.98) 0%, rgba(15,31,59,0.90) 52%, rgba(15,31,59,0) 100%),
+                linear-gradient(140deg, rgba(15,31,59,0.74), rgba(23,44,82,0.58));
+        }
+        .presentation-logo {
+            width: min(380px, 84vw);
+            height: auto;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            object-fit: contain;
+            display: block;
+        }
+        .presentation-logo-wrap.bottom .presentation-logo {
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+        }
+
+        .stat-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; width: 100%; max-width: 700px; }
+        .stat-item { text-align: center; }
+        .stat-number { font-family: var(--font-bold); font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.25rem; }
+        .stat-number.gold { color: var(--gold); }
+        .stat-number.magenta { color: var(--magenta); }
+        .stat-number.teal { color: var(--teal); }
+        .stat-label { font-size: 0.82rem; color: var(--slate-400); font-weight: 500; }
+
+        .def-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 2.5rem 3rem; max-width: 800px; margin-top: 1.5rem; position: relative; }
+        .def-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; border-radius: 20px 0 0 20px; background: var(--gradient-brand); }
+        .def-word { font-family: var(--font-bold); font-size: 2.5rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; letter-spacing: 0.03em; text-transform: uppercase; }
+        .def-phonetic { font-style: italic; color: var(--teal); font-size: 1rem; margin-bottom: 1rem; }
+        .def-text { font-size: 1.1rem; line-height: 1.8; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+        .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 2rem; position: relative; transition: all 0.4s ease; --hover-bg: rgba(177,32,40,0.12); --hover-border: rgba(177,32,40,0.58); --hover-shadow: rgba(177,32,40,0.30); }
+        .card:hover { border-color: var(--hover-border); background: var(--hover-bg); transform: translateY(-4px); box-shadow: 0 12px 28px var(--hover-shadow); }
+        .card-grid .card:nth-child(4n+1) { --hover-bg: rgba(177,32,40,0.13); --hover-border: rgba(177,32,40,0.62); --hover-shadow: rgba(177,32,40,0.32); }
+        .card-grid .card:nth-child(4n+2) { --hover-bg: rgba(224,89,42,0.13); --hover-border: rgba(224,89,42,0.62); --hover-shadow: rgba(224,89,42,0.32); }
+        .card-grid .card:nth-child(4n+3) { --hover-bg: rgba(255,200,68,0.13); --hover-border: rgba(255,200,68,0.68); --hover-shadow: rgba(255,200,68,0.34); }
+        .card-grid .card:nth-child(4n+4) { --hover-bg: rgba(31,61,123,0.16); --hover-border: rgba(31,61,123,0.70); --hover-shadow: rgba(31,61,123,0.34); }
+        .card-number { font-family: var(--font-bold); font-size: 2rem; font-weight: 700; line-height: 1; margin-bottom: 0.5rem; }
+        .card-number.magenta { background: var(--gradient-magenta); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-number.gold { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-number.teal { background: var(--gradient-teal); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-number.aqua { background: var(--gradient-aqua); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-title { font-family: var(--font-bold); font-weight: 700; font-size: 1.05rem; color: var(--white); margin-bottom: 0.4rem; }
+        .card-desc { font-size: 0.92rem; line-height: 1.65; color: var(--slate-400); }
+        .download-actions { display: flex; gap: 0.55rem; flex-wrap: wrap; margin-top: 1rem; }
+        .download-link {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 0.48rem 0.8rem;
+            font-family: var(--font-bold);
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.22);
+            background: rgba(255,255,255,0.08);
+        }
+        .download-link.primary {
+            border: 0;
+            background: var(--gradient-magenta);
+        }
+
+        .thirds-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .third-block { border-radius: 20px; padding: 2rem 1.75rem; text-align: center; position: relative; overflow: hidden; transition: transform 0.4s ease; }
+        .third-block:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(177,32,40,0.18); }
+        .third-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+        .third-block.magenta-block { background: rgba(177,32,40,0.06); border: 1px solid rgba(177,32,40,0.15); }
+        .third-block.magenta-block::before { background: var(--gradient-magenta); }
+        .third-block.gold-block { background: rgba(255,200,68,0.06); border: 1px solid rgba(255,200,68,0.15); }
+        .third-block.gold-block::before { background: var(--gradient-gold); }
+        .third-block.teal-block { background: rgba(224,89,42,0.06); border: 1px solid rgba(224,89,42,0.15); }
+        .third-block.teal-block::before { background: var(--gradient-teal); }
+        .third-fraction { font-family: var(--font-bold); font-size: 3rem; font-weight: 700; line-height: 1; margin-bottom: 0.5rem; }
+        .third-title { font-family: var(--font-bold); font-weight: 700; font-size: 1.05rem; color: var(--white); margin-bottom: 0.75rem; }
+        .third-items { font-size: 0.9rem; line-height: 1.8; color: var(--slate-400); }
+
+        .timeline { display: flex; align-items: flex-start; gap: 0; margin-top: 2.5rem; position: relative; }
+        .timeline::before { content: ''; position: absolute; top: 28px; left: 0; right: 0; height: 2px; background: rgba(255,255,255,0.06); }
+        .timeline-item { flex: 1; text-align: center; position: relative; padding: 0 0.5rem; }
+        .timeline-dot { width: 16px; height: 16px; border-radius: 50%; margin: 20px auto 1rem; position: relative; z-index: 2; }
+        .timeline-dot.magenta { background: var(--magenta); box-shadow: 0 0 12px rgba(177,32,40,0.5); }
+        .timeline-dot.gold { background: var(--gold); box-shadow: 0 0 12px rgba(255,200,68,0.5); }
+        .timeline-dot.teal { background: var(--teal); box-shadow: 0 0 12px rgba(224,89,42,0.5); }
+        .timeline-dot.aqua { background: var(--aqua); box-shadow: 0 0 12px rgba(88,88,90,0.5); }
+        .timeline-label { font-weight: 600; font-size: 0.88rem; color: var(--white); margin-bottom: 0.25rem; }
+        .timeline-desc { font-size: 0.82rem; color: var(--slate-400); line-height: 1.5; }
+
+        .highlight-box { background: rgba(255,200,68,0.05); border: 1px solid rgba(255,200,68,0.15); border-radius: 20px; padding: 2rem 2.5rem; max-width: 800px; margin-top: 1.5rem; transition: all 0.35s ease; }
+        .highlight-box.magenta-box { background: rgba(177,32,40,0.05); border-color: rgba(177,32,40,0.15); }
+        .highlight-box.teal-box { background: rgba(224,89,42,0.05); border-color: rgba(224,89,42,0.15); }
+        .highlight-box:hover { background: rgba(255,200,68,0.13); border-color: rgba(255,200,68,0.65); box-shadow: 0 10px 22px rgba(255,200,68,0.24); }
+        .highlight-box.magenta-box:hover { background: rgba(177,32,40,0.13); border-color: rgba(177,32,40,0.62); box-shadow: 0 10px 22px rgba(177,32,40,0.26); }
+        .highlight-box.teal-box:hover { background: rgba(224,89,42,0.13); border-color: rgba(224,89,42,0.62); box-shadow: 0 10px 22px rgba(224,89,42,0.26); }
+
+        .quote-block { border-left: 0; padding-left: 0; margin: 2.2rem auto 0; max-width: 1080px; text-align: center; }
+        .quote-text { font-family: var(--font-book); font-style: italic; font-size: clamp(2.4rem, 5.2vw, 3.75rem); color: var(--white); line-height: 1.25; }
+        .quote-author { font-weight: 600; font-size: 1.05rem; color: var(--gold); margin-top: 1rem; text-align: center; }
+
+        .icon-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .icon-item { text-align: center; }
+        .icon-circle { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem; font-size: 1.5rem; }
+        .icon-circle.magenta-bg { background: linear-gradient(135deg, rgba(177,32,40,0.15), rgba(202,54,37,0.1)); }
+        .icon-circle.gold-bg { background: linear-gradient(135deg, rgba(255,200,68,0.15), rgba(217,119,6,0.1)); }
+        .icon-circle.teal-bg { background: linear-gradient(135deg, rgba(224,89,42,0.15), rgba(202,54,37,0.1)); }
+        .icon-circle.aqua-bg { background: linear-gradient(135deg, rgba(88,88,90,0.15), rgba(0,0,0,0.1)); }
+        .icon-label { font-family: var(--font-bold); font-weight: 700; font-size: 0.92rem; color: var(--white); margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .icon-desc { font-size: 0.82rem; color: var(--slate-400); line-height: 1.5; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; align-items: start; }
+        .big-stat { font-family: var(--font-bold); font-size: clamp(2.75rem, 5vw, 4.5rem); font-weight: 700; line-height: 1; }
+
+        .gold-text { color: var(--gold); }
+        .magenta-text { color: var(--magenta); }
+        .teal-text { color: var(--teal); }
+        .aqua-text { color: var(--aqua); }
+        .white-text { color: var(--white); }
+
+        .featured-container { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 3rem; position: relative; margin-top: 2.5rem; transition: all 0.35s ease; }
+        .featured-container::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 24px 24px 0 0; background: var(--gradient-brand); }
+        .featured-container:hover { background: rgba(31,61,123,0.14); border-color: rgba(31,61,123,0.72); box-shadow: 0 12px 24px rgba(31,61,123,0.26); }
+
+        .closing-section { text-align: center; display: flex; flex-direction: column; align-items: center; padding: 8rem 3rem; position: relative; }
+        .closing-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(177,32,40,0.06) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 30% 40%, rgba(255,200,68,0.04) 0%, transparent 60%); pointer-events: none; z-index: -1; }
+
+        .form-container { max-width: 600px; margin: 0 auto; width: 100%; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+        .form-group.full-width { grid-column: 1 / -1; }
+        .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--slate-400); }
+        .form-group label .required { color: var(--magenta); }
+        .form-input { padding: 0.875rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: var(--font-book); font-size: 0.95rem; transition: all 0.3s ease; outline: none; }
+        .form-input:focus { border-color: var(--magenta); box-shadow: 0 0 0 3px rgba(177,32,40,0.15); background: rgba(255,255,255,0.08); }
+        select.form-input { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239CA3AF' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+        select.form-input option { background: var(--charcoal-800); color: var(--white); }
+        .form-submit { width: 100%; padding: 1rem; background: var(--gradient-magenta); color: var(--white); font-family: var(--font-bold); font-size: 1rem; font-weight: 700; border: none; border-radius: 100px; cursor: pointer; box-shadow: 0 10px 30px rgba(177,32,40,0.3); transition: all 0.3s ease; margin-top: 0.5rem; }
+        .form-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(177,32,40,0.4); }
+        .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .form-success { display: none; text-align: center; padding: 2rem; }
+        .form-success .checkmark { font-size: 3rem; margin-bottom: 1rem; }
+        .form-success h3 { font-family: var(--font-bold); color: var(--white); font-size: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .consent-label { display: flex; gap: 0.75rem; align-items: flex-start; cursor: pointer; font-size: 0.85rem; color: var(--slate-400); line-height: 1.6; }
+        .consent-label input[type="checkbox"] { margin-top: 0.3rem; min-width: 18px; min-height: 18px; accent-color: var(--magenta); cursor: pointer; }
+
+        .qr-section { text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .qr-row { display: flex; gap: 4rem; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-top: 2.5rem; }
+        .qr-item { display: flex; flex-direction: column; align-items: center; }
+        .qr-container { background: var(--white); padding: 16px; border-radius: 16px; display: inline-block; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+        .qr-container canvas { display: block; }
+        .qr-label-title { font-weight: 600; font-size: 0.92rem; color: var(--white); margin-top: 1rem; margin-bottom: 0.25rem; }
+        .qr-label { font-size: 0.82rem; color: var(--slate-400); font-weight: 500; }
+        .qr-divider { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 0 1rem; }
+        .qr-divider-line { width: 1px; height: 50px; background: linear-gradient(180deg, transparent, rgba(255,200,68,0.4), transparent); }
+        .qr-divider-text { font-family: var(--font-light); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate-400); white-space: nowrap; writing-mode: vertical-lr; text-orientation: mixed; transform: rotate(180deg); }
+
+        footer { position: relative; z-index: 1; text-align: center; padding: 3rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.82rem; color: var(--slate-400); }
+        footer a { color: var(--magenta); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .fade-in.delay-1 { transition-delay: 0.1s; }
+        .fade-in.delay-2 { transition-delay: 0.2s; }
+        .fade-in.delay-3 { transition-delay: 0.3s; }
+        .fade-in.delay-4 { transition-delay: 0.4s; }
+
+        @media (max-width: 768px) {
+            section { padding: 5rem 1.5rem; }
+            .hero { padding-top: 9rem !important; }
+            .thirds-container { grid-template-columns: 1fr; }
+            .two-col { grid-template-columns: 1fr; gap: 2rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .timeline { flex-direction: column; gap: 1rem; }
+            .timeline::before { display: none; }
+            .icon-strip { grid-template-columns: repeat(2, 1fr); }
+            .stat-strip { grid-template-columns: 1fr; gap: 1.5rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .top-nav { padding: 0.75rem 1.25rem; }
+            .nav-links { display: none; }
+            .featured-container { padding: 2rem 1.5rem; }
+            .qr-row { gap: 2.5rem; }
+            .qr-divider { flex-direction: row; padding: 0.5rem 0; }
+            .qr-divider-line { width: 50px; height: 1px; }
+            .qr-divider-text { writing-mode: horizontal-tb; transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav class="top-nav" id="topNav">
+    <a href="#" class="nav-brand">
+        <span class="gold">AMAZIMA</span>&nbsp;Ministries
+    </a>
+    <div class="nav-links">
+        <a href="#model">The Model</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#evaluation">Evaluation</a>
+        <a href="#talent">Talent Optimization</a>
+        <a href="stakeholder-model-forms.html" class="nav-cta">Stakeholder Model Forms</a>
+    </div>
+</nav>
+<div class="presentation-logo-wrap top">
+    <img class="presentation-logo" src="logo_extract/amazima_logo_slide1_official.png" alt="AMAZIMA Ministries logo">
+</div>
+
+<!-- ═══════════════════════════════════════════ HERO ═══════════════════════════════════════════ -->
+<section class="hero" id="hero">
+    <div class="hero-series fade-in">Systematic High Performance Series</div>
+    <h1 class="hero-title fade-in delay-1">The Stakeholder<br><span class="gold">Framework</span></h1>
+    <p class="hero-tagline fade-in delay-2">Developing Team Members into Mission-Minded Stakeholders Through a Practical, Intentional Framework of Growth and Stewardship</p>
+    <div class="hero-badge fade-in delay-3"><span class="gold-text">AMAZIMA</span>&nbsp;&nbsp;·&nbsp;&nbsp;Ministries</div>
+    <div class="stat-strip fade-in delay-4">
+        <div class="stat-item">
+            <div class="stat-number magenta">⅓ + ⅓ + ⅓</div>
+            <div class="stat-label">Balanced Evaluation</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number gold">6 mo</div>
+            <div class="stat-label">Goal Segments</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number teal">Monthly</div>
+            <div class="stat-label">Check-ins</div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ WHAT IS A STAKEHOLDER ═══════════════════════════════════════════ -->
+<section id="foundation">
+    <div class="section-label fade-in">01 / Foundation</div>
+    <h2 class="section-title fade-in delay-1">What Is a Stakeholder?</h2>
+    <div class="def-card fade-in delay-2">
+        <div class="def-word">Stakeholder</div>
+        <div class="def-phonetic">/ˈstāk,hōldər/</div>
+        <div class="def-text">A person with an interest or concern in something, especially an organization — denoting a culture in which <strong class="gold-text">all members share responsibility for people, purpose, and outcomes.</strong></div>
+    </div>
+    <div class="quote-block fade-in delay-3">
+        <div class="quote-text">"A player who makes a team great is more valuable than a great player."</div>
+        <div class="quote-author">Coach John Wooden — UCLA Basketball</div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ THE MODEL ═══════════════════════════════════════════ -->
+<section id="model">
+    <div class="section-label fade-in">02 / The Model</div>
+    <h2 class="section-title fade-in delay-1">The Stakeholder Framework</h2>
+    <p class="section-body fade-in delay-2">A strategic framework that equips leaders with a practical, proven, and intentional approach to developing team members into mission-minded stakeholders through people-centered leadership and faithful stewardship of gifts.</p>
+    <div class="highlight-box fade-in delay-3" style="margin-top:2rem;">
+        <p style="margin:0; line-height:1.8;">This model combines <strong class="gold-text">role-specific career paths</strong> with <strong class="teal-text">systematic performance growth</strong> that aligns with objective skill development, mastery, and <strong class="magenta-text">team-based collaboration in service of mission.</strong></p>
+    </div>
+    <div class="highlight-box teal-box fade-in delay-4" style="margin-top:1.25rem;">
+        <p style="margin:0; line-height:1.8;"><strong class="teal-text">Recognition Structure:</strong> The fundamentals are the same for every team member — growth in skill, experience, and collaboration drives career trajectory. This framework gives every person in the organization a clear path forward and includes certificates of recognition when goals are met.</p>
+    </div>
+    <div class="featured-container fade-in delay-4" style="margin-top:2rem;">
+        <p style="margin:0; line-height:1.8;"><strong class="magenta-text">A Coaching Organization:</strong> When this framework is implemented, leaders and supervisors become performance coaches, creating a culture of continuous development, care, accountability, and support at every level.</p>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ KEY BENEFITS ═══════════════════════════════════════════ -->
+<section id="benefits">
+    <div class="section-label fade-in">03 / Why It Works</div>
+    <h2 class="section-title fade-in delay-1">Key Benefits</h2>
+    <div class="card-grid fade-in delay-2">
+        <div class="card">
+            <div class="card-number magenta">01</div>
+            <div class="card-title">Recognition for Performance</div>
+            <div class="card-desc">Recognition tied to increased skills and performance.</div>
+        </div>
+        <div class="card">
+            <div class="card-number teal">02</div>
+            <div class="card-title">Organizational Performance</div>
+            <div class="card-desc">Systematic development strengthens the entire organization.</div>
+        </div>
+        <div class="card">
+            <div class="card-number gold">03</div>
+            <div class="card-title">Engagement &amp; Morale</div>
+            <div class="card-desc">Increases satisfaction, collaboration, and team cohesion across all roles.</div>
+        </div>
+        <div class="card">
+            <div class="card-number magenta">04</div>
+            <div class="card-title">Career Ownership</div>
+            <div class="card-desc">Employees own their path in alignment with the ministry mission.</div>
+        </div>
+        <div class="card">
+            <div class="card-number gold">05</div>
+            <div class="card-title">Reduced Admin Burden</div>
+            <div class="card-desc">Self-assessment system eases the supervisory workload.</div>
+        </div>
+        <div class="card">
+            <div class="card-number teal">06</div>
+            <div class="card-title">Reduced Stress</div>
+            <div class="card-desc">Monthly check-ins replace high-pressure annual reviews.</div>
+        </div>
+        <div class="card">
+            <div class="card-number gold">07</div>
+            <div class="card-title">No Surprises</div>
+            <div class="card-desc">Continuous feedback means reviews confirm what everyone already knows.</div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ KEY COMPONENTS ═══════════════════════════════════════════ -->
+<section id="components">
+    <div class="section-label fade-in">04 / System Architecture</div>
+    <h2 class="section-title fade-in delay-1">Six Key Components</h2>
+    <div class="icon-strip fade-in delay-2">
+        <div class="icon-item">
+            <div class="icon-circle magenta-bg">📈</div>
+            <div class="icon-label">Career Paths</div>
+            <div class="icon-desc">Entry to executive progression</div>
+        </div>
+        <div class="icon-item">
+            <div class="icon-circle gold-bg">🎯</div>
+            <div class="icon-label">Goal-Setting</div>
+            <div class="icon-desc">Six-month segment goals</div>
+        </div>
+        <div class="icon-item">
+            <div class="icon-circle teal-bg">📋</div>
+            <div class="icon-label">Evaluation</div>
+            <div class="icon-desc">Balanced review system</div>
+        </div>
+        <div class="icon-item">
+            <div class="icon-circle gold-bg">🌱</div>
+            <div class="icon-label">Development</div>
+            <div class="icon-desc">Integrated staff growth</div>
+        </div>
+        <div class="icon-item">
+            <div class="icon-circle magenta-bg">🤝</div>
+            <div class="icon-label">Coaching</div>
+            <div class="icon-desc">Performance coaching culture</div>
+        </div>
+        <div class="icon-item">
+            <div class="icon-circle aqua-bg">🏅</div>
+            <div class="icon-label">Recognition</div>
+            <div class="icon-desc">Certificates for achieved goals</div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ CAREER PATHS ═══════════════════════════════════════════ -->
+<section id="career-paths">
+    <div class="section-label fade-in">05 / Career Paths</div>
+    <h2 class="section-title fade-in delay-1">Entry to Executive</h2>
+    <div class="two-col fade-in delay-2">
+        <div>
+            <p class="section-body">Every employee has a clear progression — horizontal and/or vertical — with systematic skill set development that is good for both the ministry and the individual.</p>
+            <div class="highlight-box" style="margin-top:1.5rem;">
+                <p style="margin:0; line-height:1.8;"><strong class="gold-text">Core Principle:</strong> As people develop new skills and grow in contribution, they see that investment reflected in their calling and career trajectory — whether through structured compensation increases or greater responsibility and long-term impact.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom:1.25rem;">
+                <div class="card-number magenta">→</div>
+                <div class="card-title">Horizontal Progression</div>
+                <div class="card-desc">Broaden skills and capabilities across the organization.</div>
+            </div>
+            <div class="card">
+                <div class="card-number gold">↑</div>
+                <div class="card-title">Vertical Progression</div>
+                <div class="card-desc">Advance through increasing levels of responsibility and leadership.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ GOAL SETTING ═══════════════════════════════════════════ -->
+<section id="goals">
+    <div class="section-label fade-in">06 / Goal-Setting System</div>
+    <h2 class="section-title fade-in delay-1">Six-Month Segment Goals</h2>
+    <p class="section-body fade-in delay-2">Clear and concise goals are set for each six-month segment. Goals should be written so that faithful progress and clear outcomes are easy to recognize.</p>
+    <div class="timeline fade-in delay-3">
+        <div class="timeline-item">
+            <div class="timeline-dot magenta"></div>
+            <div class="timeline-label">Month 1</div>
+            <div class="timeline-desc">Goals set for all three focus areas in alignment with organizational goals</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot gold"></div>
+            <div class="timeline-label">Months 2–5</div>
+            <div class="timeline-desc">Monthly check-ins with self-assessment</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot teal"></div>
+            <div class="timeline-label">Month 6</div>
+            <div class="timeline-desc">Formal review &amp; compensation adjustment, as appropriate</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot aqua"></div>
+            <div class="timeline-label">Repeat</div>
+            <div class="timeline-desc">New goals, new segment, continuous growth</div>
+        </div>
+    </div>
+    <div class="highlight-box teal-box fade-in delay-4">
+        <p style="margin:0; line-height:1.8;"><strong class="teal-text">Built-in Succession Planning:</strong> The goal-setting process inherently creates matriculation pathways and prepares employees for the next level.</p>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ EVALUATION / THIRDS ═══════════════════════════════════════════ -->
+<section id="evaluation">
+    <div class="section-label fade-in">07 / Evaluation System</div>
+    <h2 class="section-title fade-in delay-1">The Three Pillars</h2>
+    <p class="section-body fade-in delay-2">Every employee is evaluated equally across three dimensions — each worth one-third of their overall assessment, with fairness, clarity, and shared accountability.</p>
+    <div class="thirds-container fade-in delay-3">
+        <div class="third-block magenta-block">
+            <div class="third-fraction magenta-text">⅓</div>
+            <div class="third-title">New Skill Development</div>
+            <div class="third-items">New tasks or knowledge areas<br>Certifications &amp; education<br>Projects &amp; experiences<br>Conferences &amp; associations</div>
+        </div>
+        <div class="third-block gold-block">
+            <div class="third-fraction gold-text">⅓</div>
+            <div class="third-title">Mastery &amp; Tenure</div>
+            <div class="third-items">Increased aptitude<br>Deeper experience<br>Institutional knowledge<br>Big-picture understanding</div>
+        </div>
+        <div class="third-block teal-block">
+            <div class="third-fraction teal-text">⅓</div>
+            <div class="third-title">Culture &amp; Character</div>
+            <div class="third-items">Purpose in community<br>Values in action<br>Investing in others<br>Making the team better</div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ REVIEW SYSTEM ═══════════════════════════════════════════ -->
+<section id="reviews">
+    <div class="section-label fade-in">08 / Review System</div>
+    <h2 class="section-title fade-in delay-1">Monthly Check-ins, Not Annual Surprises</h2>
+    <div class="two-col fade-in delay-2">
+        <div>
+            <p class="section-body">Each month, the employee brings a self-evaluation to the supervisor — rating their progress toward total completion of each goal on a 1–10 scale.</p>
+            <p class="section-body" style="margin-top:1rem;">The supervisor affirms or gently redirects, then asks: <strong class="gold-text">"How can I support you and your progress this month?"</strong></p>
+            <div class="highlight-box" style="margin-top:1.5rem; background:rgba(224,89,42,0.05); border-color:rgba(224,89,42,0.15);">
+                <p style="margin:0; line-height:1.8;"><strong class="teal-text">Key Insight:</strong> It's far more comfortable for a supervisor to gently correct a self-assessment monthly than to prepare once a year to address shortcomings. Most people naturally underestimate their progress, so supervisors are often able to encourage, affirm, and build them up.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom:1.25rem;">
+                <div class="card-number teal">✓</div>
+                <div class="card-title">Self-Assessment Benefits</div>
+                <div class="card-desc">Empowerment, context and fairness, administrative easement, full support, no surprises.</div>
+            </div>
+            <div class="card" style="margin-bottom:1.25rem;">
+                <div class="card-number gold">⟳</div>
+                <div class="card-title">Why Six-Month Sprints?</div>
+                <div class="card-desc">A series of sprints are easier to buy into than a long marathon. More flexibility to pivot in a rapidly changing market.</div>
+            </div>
+            <div class="card">
+                <div class="card-number magenta">★</div>
+                <div class="card-title">The Promise</div>
+                <div class="card-desc">When monthly check-ins are handled with care and consistency, the formal review produces zero surprises.</div>
+            </div>
+        </div>
+    </div>
+    <div class="featured-container fade-in delay-3" style="margin-top:2.5rem;">
+        <p style="margin:0; line-height:1.8;">This approach turns the organization into a <strong class="gold-text">coaching culture</strong>, where supervisors become performance coaches who raise the level of performance with clarity, encouragement, and accountability across every team member, whether salaried.</p>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ PERFORMANCE & RECOGNITION ═══════════════════════════════════════════ -->
+<section id="compensation">
+    <div class="section-label fade-in">09 / Performance &amp; Recognition</div>
+    <h2 class="section-title fade-in delay-1">Performance Drives Visibility</h2>
+    <p class="section-body fade-in delay-2">Whether someone is hourly or salaried, their contribution is driven by the same fundamentals: <strong class="white-text">skill set, experience, and wisdom faithfully applied.</strong> High performance ensures that an individual's contributions are seen, valued, and celebrated across the organization.</p>
+
+    <div class="two-col fade-in delay-3" style="margin-top:2.5rem;">
+        <div>
+            <div class="highlight-box magenta-box" style="margin-top:0;">
+                <div class="big-stat" style="background:var(--gradient-magenta);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">90% → 90%</div>
+                <p style="margin-top:0.75rem; line-height:1.8;"><strong class="white-text">The 90% → 90% Principle:</strong> The percentage of goal achievement is directly tied to the level of formal recognition and professional endorsement. Achieve 90% of your goals, and you unlock 90% of the Recognition Tier for that period (e.g., public praise, internal awards, or leadership spotlights).</p>
+            </div>
+            <div class="highlight-box teal-box" style="margin-top:1.25rem;">
+                <p style="margin:0; line-height:1.8;"><strong class="teal-text">Growth in Standing:</strong> Staying on track to hit goals ensures that growing skill and collaboration translate into increased internal influence, priority for plum assignments, and first-look status for future promotions or leadership tracks.</p>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="margin-bottom:1.25rem;">
+                <div class="card-title gold-text">Market-Based Benchmarking</div>
+                <div class="card-desc">Instead of benchmarking strictly against salary data, the organization uses objective data to benchmark Role Excellence. We define what Top Tier performance looks like in the industry, ensuring our people are becoming the most sought-after professionals in their field.</div>
+            </div>
+            <div class="card" style="margin-bottom:1.25rem;">
+                <div class="card-title teal-text">Getting Back on Track</div>
+                <div class="card-desc">If someone falls short of 100%, supervisors provide immediate, clear coaching. Because this system is built on recognition, the reward for getting back on track is the restoration of status and trust, ensuring the individual remains a Gold Standard contributor to the mission.</div>
+            </div>
+            <div class="card">
+                <div class="card-title magenta-text">The Bottom Line</div>
+                <div class="card-desc">This system gives people ownership of their professional reputation and career trajectory. It ensures that the mission is fueled by people who are motivated by mastery and appreciation, creating a culture of excellence that precedes financial rewards.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ TALENT OPTIMIZATION ═══════════════════════════════════════════ -->
+<section id="talent">
+    <div class="section-label fade-in">10 / Talent Optimization</div>
+    <h2 class="section-title fade-in delay-1">Data-Driven People Strategy</h2>
+    <p class="section-body fade-in delay-2">This stakeholder framework is strengthened by talent insights and software that align people, roles, and organizational strategy through wise stewardship of people and resources. Tools such as the Predictive Index are <strong class="white-text">optional and complementary</strong> and can be layered in as needed.</p>
+        <div class="card-grid fade-in delay-3" style="margin-top:2rem;">
+        <div class="card">
+            <div class="card-number magenta">ℹ</div>
+            <div class="card-title">Behavioral Insights <span style="font-size:0.78rem; color:var(--slate-400); font-weight:400;">(Optional)</span></div>
+            <div class="card-desc">Align roles and responsibilities to individual behavioral strengths using world-class assessment tools like the Predictive Index.</div>
+        </div>
+        <div class="card">
+            <div class="card-number teal">⚙</div>
+            <div class="card-title">System Software</div>
+            <div class="card-desc">Design and manage the system with appropriate software for clarity and execution at scale.</div>
+        </div>
+        <div class="card">
+            <div class="card-number gold">∞</div>
+            <div class="card-title">Integrated Development</div>
+            <div class="card-desc">When people flourish, organizations flourish. Staff investment can be budgeted easily with a built-in succession plan.</div>
+        </div>
+    </div>
+    <div class="featured-container fade-in delay-4">
+        <p style="margin:0; line-height:1.8;"><strong class="gold-text">Training &amp; Support:</strong> AMAZIMA leaders can reinforce this framework through coaching rhythms, supervisor development, and ongoing team support marked by clarity, compassion, and consistency. Optional assessment tools can be added to strengthen clarity and execution at scale.</p>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════ DOWNLOADABLE FORMS ═══════════════════════════════════════════ -->
+<section id="forms">
+    <div class="section-label fade-in">11 / Resources</div>
+    <h2 class="section-title fade-in delay-1">Downloadable Forms</h2>
+    <p class="section-body fade-in delay-2">Access the Stakeholder Model forms and recognition certificate directly from this presentation.</p>
+    <div class="card-grid fade-in delay-3" style="margin-top:2rem;">
+        <div class="card">
+            <div class="card-title">Goal Setting Form</div>
+            <div class="card-desc">Set clear six-month goals and aligned development priorities.</div>
+            <div class="download-actions">
+                <a class="download-link primary" href="forms-pdf/AMAZIMA Goal Setting Worksheet.pdf" target="_blank" rel="noopener">View PDF</a>
+                <a class="download-link" href="forms-pdf/AMAZIMA Goal Setting Worksheet.pdf" download="AMAZIMA Goal Setting Worksheet.pdf">Download</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">Monthly Check-In Form</div>
+            <div class="card-desc">Track progress, coaching, and next-step actions each month.</div>
+            <div class="download-actions">
+                <a class="download-link primary" href="forms-pdf/AMAZIMA Monthly Check-in with Supervisor.pdf" target="_blank" rel="noopener">View PDF</a>
+                <a class="download-link" href="forms-pdf/AMAZIMA Monthly Check-in with Supervisor.pdf" download="AMAZIMA Monthly Check-in with Supervisor.pdf">Download</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">Six-Month Review Form</div>
+            <div class="card-desc">Complete balanced evaluation and end-of-segment review decisions.</div>
+            <div class="download-actions">
+                <a class="download-link primary" href="forms-pdf/AMAZIMA Six-Month Review Form.pdf" target="_blank" rel="noopener">View PDF</a>
+                <a class="download-link" href="forms-pdf/AMAZIMA Six-Month Review Form.pdf" download="AMAZIMA Six-Month Review Form.pdf">Download</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">Six-Month Goal Setting Form</div>
+            <div class="card-desc">Launch the next segment with clear outcomes and accountability checkpoints.</div>
+            <div class="download-actions">
+                <a class="download-link primary" href="forms-pdf/AMAZIMA Six-Month Goal Setting Form.pdf" target="_blank" rel="noopener">View PDF</a>
+                <a class="download-link" href="forms-pdf/AMAZIMA Six-Month Goal Setting Form.pdf" download="AMAZIMA Six-Month Goal Setting Form.pdf">Download</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">Certificate of Achievement</div>
+            <div class="card-desc">Issue recognition for employees who meet Stakeholder Model goals.</div>
+            <div class="download-actions">
+                <a class="download-link primary" href="certificates/stakeholder-goal-certificate.html" target="_blank" rel="noopener">Open</a>
+                <a class="download-link" href="certificates/stakeholder-goal-certificate.html?pdf=1" target="_blank" rel="noopener">Download PDF</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="presentation-logo-wrap bottom">
+    <img class="presentation-logo" src="logo_extract/amazima_logo_slide1_official.png" alt="AMAZIMA Ministries logo">
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <span class="gold-text" style="white-space:nowrap;">AMAZIMA</span> Ministries
+</footer>
+
+<!-- ── SCRIPTS ── -->
+
+<script>
+    const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+</script>
+<script>window.addEventListener('scroll',()=>{document.getElementById('topNav').classList.toggle('scrolled',window.scrollY>50);});</script>
+
+</body>
+</html>
