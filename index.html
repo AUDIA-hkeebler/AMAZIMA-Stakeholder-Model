@@ -181,7 +181,8 @@
         }
         #talent::before {
             background-image:
-                linear-gradient(145deg, rgba(15,31,59,0.82), rgba(23,44,82,0.78)),
+                linear-gradient(180deg, rgba(15,31,59,0.16) 0%, rgba(15,31,59,0.48) 58%, rgba(15,31,59,0.94) 100%),
+                linear-gradient(145deg, rgba(15,31,59,0.74), rgba(23,44,82,0.70)),
                 var(--photo-talent);
             background-position: center 34%;
         }
@@ -331,6 +332,12 @@
         .featured-container { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 3rem; position: relative; margin-top: 2.5rem; transition: all 0.35s ease; }
         .featured-container::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 24px 24px 0 0; background: var(--gradient-brand); }
         .featured-container:hover { background: rgba(31,61,123,0.14); border-color: rgba(31,61,123,0.72); box-shadow: 0 12px 24px rgba(31,61,123,0.26); }
+        .coaching-emphasis {
+            font-size: clamp(2rem, 3.5vw, 2.7rem);
+            line-height: 1.25 !important;
+            font-family: var(--font-bold);
+            letter-spacing: 0.01em;
+        }
 
         .closing-section { text-align: center; display: flex; flex-direction: column; align-items: center; padding: 8rem 3rem; position: relative; }
         .closing-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(177,32,40,0.06) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 30% 40%, rgba(255,200,68,0.04) 0%, transparent 60%); pointer-events: none; z-index: -1; }
@@ -409,7 +416,6 @@
         <a href="#benefits">Benefits</a>
         <a href="#evaluation">Evaluation</a>
         <a href="#talent">Talent Optimization</a>
-        <a href="stakeholder-model-forms.html" class="nav-cta">Stakeholder Model Forms</a>
     </div>
 </nav>
 <div class="presentation-logo-wrap top">
@@ -449,10 +455,6 @@
         <div class="def-phonetic">/ˈstāk,hōldər/</div>
         <div class="def-text">A person with an interest or concern in something, especially an organization — denoting a culture in which <strong class="gold-text">all members share responsibility for people, purpose, and outcomes.</strong></div>
     </div>
-    <div class="quote-block fade-in delay-3">
-        <div class="quote-text">"A player who makes a team great is more valuable than a great player."</div>
-        <div class="quote-author">Coach John Wooden — UCLA Basketball</div>
-    </div>
 </section>
 
 <div class="section-divider"></div>
@@ -469,7 +471,7 @@
         <p style="margin:0; line-height:1.8;"><strong class="teal-text">Recognition Structure:</strong> The fundamentals are the same for every team member — growth in skill, experience, and collaboration drives career trajectory. This framework gives every person in the organization a clear path forward and includes certificates of recognition when goals are met.</p>
     </div>
     <div class="featured-container fade-in delay-4" style="margin-top:2rem;">
-        <p style="margin:0; line-height:1.8;"><strong class="magenta-text">A Coaching Organization:</strong> When this framework is implemented, leaders and supervisors become performance coaches, creating a culture of continuous development, care, accountability, and support at every level.</p>
+        <p class="coaching-emphasis" style="margin:0;"><strong class="magenta-text">A Coaching Organization:</strong> When this framework is implemented, leaders and supervisors become performance coaches, creating a culture of continuous development, care, accountability, and support at every level.</p>
     </div>
 </section>
 
@@ -644,6 +646,10 @@
             <div class="third-items">Purpose in community<br>Values in action<br>Investing in others<br>Making the team better</div>
         </div>
     </div>
+    <div class="quote-block fade-in delay-4">
+        <div class="quote-text">"A player who makes a team great is more valuable than a great player."</div>
+        <div class="quote-author">Coach John Wooden — UCLA Basketball</div>
+    </div>
 </section>
 
 <div class="section-divider"></div>
@@ -747,56 +753,6 @@
     </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- ═══════════════════════════════════════════ DOWNLOADABLE FORMS ═══════════════════════════════════════════ -->
-<section id="forms">
-    <div class="section-label fade-in">11 / Resources</div>
-    <h2 class="section-title fade-in delay-1">Downloadable Forms</h2>
-    <p class="section-body fade-in delay-2">Access the Stakeholder Model forms and recognition certificate directly from this presentation.</p>
-    <div class="card-grid fade-in delay-3" style="margin-top:2rem;">
-        <div class="card">
-            <div class="card-title">Goal Setting Form</div>
-            <div class="card-desc">Set clear six-month goals and aligned development priorities.</div>
-            <div class="download-actions">
-                <a class="download-link primary" href="forms-pdf/AMAZIMA Goal Setting Worksheet.pdf" target="_blank" rel="noopener">View PDF</a>
-                <a class="download-link" href="forms-pdf/AMAZIMA Goal Setting Worksheet.pdf" download="AMAZIMA Goal Setting Worksheet.pdf">Download</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-title">Monthly Check-In Form</div>
-            <div class="card-desc">Track progress, coaching, and next-step actions each month.</div>
-            <div class="download-actions">
-                <a class="download-link primary" href="forms-pdf/AMAZIMA Monthly Check-in with Supervisor.pdf" target="_blank" rel="noopener">View PDF</a>
-                <a class="download-link" href="forms-pdf/AMAZIMA Monthly Check-in with Supervisor.pdf" download="AMAZIMA Monthly Check-in with Supervisor.pdf">Download</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-title">Six-Month Review Form</div>
-            <div class="card-desc">Complete balanced evaluation and end-of-segment review decisions.</div>
-            <div class="download-actions">
-                <a class="download-link primary" href="forms-pdf/AMAZIMA Six-Month Review Form.pdf" target="_blank" rel="noopener">View PDF</a>
-                <a class="download-link" href="forms-pdf/AMAZIMA Six-Month Review Form.pdf" download="AMAZIMA Six-Month Review Form.pdf">Download</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-title">Six-Month Goal Setting Form</div>
-            <div class="card-desc">Launch the next segment with clear outcomes and accountability checkpoints.</div>
-            <div class="download-actions">
-                <a class="download-link primary" href="forms-pdf/AMAZIMA Six-Month Goal Setting Form.pdf" target="_blank" rel="noopener">View PDF</a>
-                <a class="download-link" href="forms-pdf/AMAZIMA Six-Month Goal Setting Form.pdf" download="AMAZIMA Six-Month Goal Setting Form.pdf">Download</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-title">Certificate of Achievement</div>
-            <div class="card-desc">Issue recognition for employees who meet Stakeholder Model goals.</div>
-            <div class="download-actions">
-                <a class="download-link primary" href="certificates/stakeholder-goal-certificate.html" target="_blank" rel="noopener">Open</a>
-                <a class="download-link" href="certificates/stakeholder-goal-certificate.html?pdf=1" target="_blank" rel="noopener">Download PDF</a>
-            </div>
-        </div>
-    </div>
-</section>
 <div class="presentation-logo-wrap bottom">
     <img class="presentation-logo" src="logo_extract/amazima_logo_slide1_official.png" alt="AMAZIMA Ministries logo">
 </div>
